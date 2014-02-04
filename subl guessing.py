@@ -11,6 +11,7 @@ guess = int(raw_input("> "))
 while True:
     if guess > number:
         print "Your guess is too high: try again."
+        num_guesses.append(i)
         print "Your guess?"
         guess = int(raw_input("> "))
     elif guess < number:
@@ -18,5 +19,5 @@ while True:
         print "Your guess?"
         guess = int(raw_input("> "))
     else:
-        print "Well done, %s! You found my number!" % name
-        return False
+        print "Well done, %s! You found my number in %i tries!" % name
+        break
