@@ -21,7 +21,10 @@ while True:
     elif int(guess) < number:
         print "Your guess is too low: try again."
     else:
-        print "Well done, %s! You found my number in %i tries!" % (name, i)
+        if i == 1:
+            print "Well done, %s! You found my number in your first try!" % (name)
+        else:
+            print "Well done, %s! You found my number in %i tries!" % (name, i)
         break
 
-    i = i + 1
+    i += 1
