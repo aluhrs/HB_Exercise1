@@ -4,14 +4,16 @@ import random
 print "Hey! What is your name?"
 name = raw_input("> ")
 print "%s, I'm thinking of a number between 1 and 100. Try to guess my number." % name
-number = random.randint(1, 101)
+number = random.randint(1, 100)
 
+i = 1
 
 while True:
 
     print "Your guess?"
     guess = raw_input("> ")
-    i = 1
+    
+
     if not guess.isdigit():
         print "That's not an int! Try again!"
     elif int(guess) > number:
